@@ -1,0 +1,36 @@
+-- Header --
+Logo, Navbar, cta buttons
+
+-- HOME --
+hero div with get it now cta btn, background img and some call 
+
+-- ABOUT --
+What make our coffee special ? 
+Learn more cta btn
+
+-- MENU --
+grid of coffee...
+add to cart button, price, sale, ...
+
+-- LATEST PRODUCTS --
+add to cart, favourite, zoom in buttons.
+image
+rating , price
+
+
+-- REVIEWS --
+reviews, customer image, rating
+
+-- CONTACT --
+location sharing 
+get in touch form with name, email, phone number
+
+-- BLOGS --
+image
+title
+by admin, ... descriptions 
+read more -> linking
+
+--  Footer --
+social icons
+authorize

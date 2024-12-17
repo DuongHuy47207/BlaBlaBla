@@ -3,10 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Responsive Coffee Website</title>
+
+    <!-- REMIXICON LINK  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
+
+    <!-- SWIPERJS LINK  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- LEAFLET LINK  -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- CUSTOM STYLES LINK  -->
+     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="e1.html">E1</a>
-    <a href="e2.html">E2</a>
+    <header class="header">
+        <img src="#" alt="High Quality coffee" class="nav-logo">
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#review" class="nav-link">Review</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#blogs" class="nav-link">Blogs</a></li>
+            </ul>
+        </nav>
+
+        <div class="cta-btn-container">
+            <i class="ri-search-line icon search-btn"></i>
+            <i class="ri-shopping-cart-2-fill icon cart-btn"></i>
+            <i class="ri-menu-line icon menu-btn"></i>
+        </div>
+
+
+    </header>
+
+    <main class="main">
+        <!-- HOME SECTION  -->
+        <section class="home-section" id="home">
+            <div class="hero-container">
+                <h1 class="hero-title">Coffee Home</h1>
+                <p class="hero-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi dolor animi rem minima. Asperiores, fugit facere nihil</p>
+                <a href="" class="hero-cta-btn">Get it Now</a>
+            </div>
+
+        </section>
+
+        <!-- ABOUT SECTION  -->
+        <section class="about-section" id="about">
+            <h2 class="section-title">About Us</h2>
+            <div class="wh-special-container">
+                <h3 class="intro-title">What make our coffee special?</h3>
+                <p>Our coffee stands out for its sustainably sourced beans, small-batch roasting, and rich, complex flavors. Every cup is crafted with precision and passion, offering a truly exceptional experience with every sip.</p>
+            </div>
+        </section>
+
+        <!-- MENU SECTION  -->
+        <section class="menu-section" id="menu">
+            <h2 class="section-title">Main Menu</h2>
+            <div class="menu-container">
+                <div class="product">
+                    <img src="#" alt="Coffee">
+                    <div class="product-attributes">
+                        <p class="product-name"></p>
+                        <p class="product-price"></p>
+                    </div>
+                    <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="#" alt="Coffee">
+                    <div class="product-attributes">
+                        <p class="product-name"></p>
+                        <p class="product-price"></p>
+                    </div>
+                    <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="#" alt="Coffee">
+                    <div class="product-attributes">
+                        <p class="product-name"></p>
+                        <p class="product-price"></p>
+                    </div>
+                    <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="#" alt="Coffee">
+                    <div class="product-attributes">
+                        <p class="product-name"></p>
+                        <p class="product-price"></p>
+                    </div>
+                    <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="#" alt="Coffee">
+                    <div class="product-attributes">
+                        <p class="product-name"></p>
+                        <p class="product-price"></p>
+                    </div>
+                    <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="#" alt="Coffee">
+                    <div class="product-attributes">
+                        <p class="product-name"></p>
+                        <p class="product-price"></p>
+                    </div>
+                    <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS SECTIONS  -->
+        <section class="products-section" id="products">
+            <h2 class="section-title">The TOP-3 Product</h2>
+            <div class="product-wrapper">
+                <div class="product-2">
+                    <img src="#" alt="">
+                    <div class="product-attributes">
+                        <p class="product-name"></p>
+                        <div class="product-rate"></div>
+                        <p class="product-price"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-wrapper">
+                <div class="product-2">
+                    <img src="#" alt="">
+                    <div class="product-attributes">
+                        <p class="product-name"></p>
+                        <div class="product-rate"></div>
+                        <p class="product-price"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-wrapper">
+                <div class="product-2">
+                    <img src="#" alt="">
+                    <div class="product-attributes">
+                        <p class="product-name"></p>
+                        <div class="product-rate"></div>
+                        <p class="product-price"></p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- REVIEW SECTION  -->
+        <section class="review-section" id="review">
+            <h2 class="section-title">Reviews</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide review-container">
+                    <div class="customer-image-container">
+                        <img src="#" alt="">
+                    </div>
+                    <div class="review-para"></div>
+                    <p class="customer-name"></p>
+                  </div>
+                  <div class="swiper-slide review-container">
+                    <div class="customer-image-container">
+                        <img src="#" alt="">
+                    </div>
+                    <div class="review-para"></div>
+                    <p class="customer-name"></p>
+                  </div>
+                  <div class="swiper-slide review-container">
+                    <div class="customer-image-container">
+                        <img src="#" alt="">
+                    </div>
+                    <div class="review-para"></div>
+                    <p class="customer-name"></p>
+                  </div>
+                  <div class="swiper-slide review-container">
+                    <div class="customer-image-container">
+                        <img src="#" alt="">
+                    </div>
+                    <div class="review-para"></div>
+                    <p class="customer-name"></p>
+                  </div>
+                  <div class="swiper-slide review-container">
+                    <div class="customer-image-container">
+                        <img src="#" alt="">
+                    </div>
+                    <div class="review-para"></div>
+                    <p class="customer-name"></p>
+                  </div>
+                  <div class="swiper-slide review-container">
+                    <div class="customer-image-container">
+                        <img src="#" alt="">
+                    </div>
+                    <div class="review-para"></div>
+                    <p class="customer-name"></p>
+                  </div>
+
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+              </div>
+            
+        </section>
+
+        <!-- CONTACT SECTION  -->
+        <section class="contact-section" id="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="location-container" id="map">
+
+            </div>
+        </section>
+
+        <!-- BLOGS SECTION  -->
+        <section class="blogs-section" id="blogs">
+            <h2 class="section-title">Blogs</h2>
+        </section>
+    </main>
+
+    <footer class="footer">
+
+    </footer>
+
+    <!-- LEAFLET JS  -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- SWIPERJS SCRIPTS  -->
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+      
+        const swiper = new Swiper('.swiper', {
+        loop: true,
+
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        });
+      </script>
+
+     <!-- CUSTOM SCRIPTS  -->
+    <script src="scripts.js"></script>
 </body>
 </html>
