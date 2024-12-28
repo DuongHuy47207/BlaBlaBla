@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Coffee Website</title>
 
-    <!-- REMIXICON LINK  -->
+    <!-- REMIXICON & FONTAWESOME LINK  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- SWIPERJS LINK  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -19,11 +20,11 @@
 </head>
 <body>
     <header class="header">
-        <img src="#" alt="High Quality coffee" class="nav-logo">
+        <img src="https://freesvg.org/img/1667812423coffee-shop-logo-concept.png" alt="High Quality coffee" class="nav-logo">
 
         <nav class="navbar">
             <ul>
-                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>  
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#menu" class="nav-link">Menu</a></li>
                 <li><a href="#products" class="nav-link">Products</a></li>
@@ -34,9 +35,9 @@
         </nav>
 
         <div class="cta-btn-container">
-            <i class="ri-search-line icon search-btn"></i>
-            <i class="ri-shopping-cart-2-fill icon cart-btn"></i>
-            <i class="ri-menu-line icon menu-btn"></i>
+            <button class="search-btn" id="search-btn"><i class="ri-search-line icon"></i></button>
+            <button class="cart-btn" id="cart-btn"><i class="ri-shopping-cart-2-fill icon"></i></button>
+            <button class="menu-btn" id="menu-btn"><i class="ri-menu-line icon"></i></button>
         </div>
 
 
@@ -44,11 +45,15 @@
 
     <main class="main">
         <!-- HOME SECTION  -->
+        
         <section class="home-section" id="home">
-            <div class="hero-container">
-                <h1 class="hero-title">Coffee Home</h1>
-                <p class="hero-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi dolor animi rem minima. Asperiores, fugit facere nihil</p>
-                <a href="" class="hero-cta-btn">Get it Now</a>
+            <h1 class="hero-title">Coffee Shop</h1>
+            <div class="home-wrapper">
+                <div class="hero-container">
+                    <h3 class="hero-title">Coffee Home</h1>
+                    <p class="hero-description">Coffee is more than a drink—it's a ritual, a source of energy, and a spark for creativity. From its rich origins to the comfort of a shared cup, coffee connects people, fuels ambition, and turns ordinary moments into something extraordinary.</p>
+                    <a href="" class="hero-cta-btn">Get it Now</a>
+                </div>
             </div>
 
         </section>
@@ -56,9 +61,40 @@
         <!-- ABOUT SECTION  -->
         <section class="about-section" id="about">
             <h2 class="section-title">About Us</h2>
-            <div class="wh-special-container">
-                <h3 class="intro-title">What make our coffee special?</h3>
-                <p>Our coffee stands out for its sustainably sourced beans, small-batch roasting, and rich, complex flavors. Every cup is crafted with precision and passion, offering a truly exceptional experience with every sip.</p>
+            <h3 class="intro-title">What make our coffee special?</h3>
+            <div class="diff-wrapper">
+                <div class="diff-container">
+                    <div class="factor-container quality-factor">
+                        <h4 class="factor-title">Quality</h4>
+                        <img src="assets/images/coffee-beans.jpg" alt="High Quality Coffee" class="factor-image">
+                        <p class="factor-description">Made from the finest beans and expertly roasted, our coffee delivers rich, authentic flavors in every cup. Experience quality you can taste, crafted with care.
+                    </div>
+                    <div class="factor-container customer-exp-factor">
+                        <h4 class="factor-title">Customer Experience</h4>
+                        <img src="assets/images/waiter.jpg" alt="Good Customer Experience" class="factor-image">
+                        <p>We're dedicated to delivering outstanding service and perfectly crafted drinks, ensuring every visit is a delight.</p>
+                    </div>
+                </div>
+                <div class="diff-container special">
+                    <div class="factor-container brand-story-factor">
+                        <h3 class="factor-title">Our Story</h3>
+                        <img src="assets/images/story.jpg" alt="Good Customer Experience" class="factor-image">
+                        <p>Our journey began with a simple vision: to share our passion for exceptional coffee and meaningful connections. From sourcing the finest beans to perfecting every roast, we've built a brand rooted in quality, sustainability, and care. What started as a small idea has grown into a community of coffee lovers who value authenticity and craftsmanship. Every cup tells a story—our story, and yours.
+                        </p>
+                    </div>
+                </div>
+                <div class="diff-container">
+                    <div class="factor-container atmosphere-factor">
+                        <h4 class="factor-title">Shop Atmosphere</h4>
+                        <img src="assets/images/atmosphere.jpg" alt="Fashionable atmosphere" class="factor-image">
+                        <p>Our café blends warm aromas, cozy seating, and artistic décor, creating the perfect spot to relax or connect.</p>
+                    </div>
+                    <div class="factor-container menu-factor">
+                        <h4 class="factor-title">Unique Menu</h4>
+                        <img src="assets/images/menu.jpg" alt="Unique Coffee Menu" class="factor-image">
+                        <p>Our menu is a blend of creativity and flavor, offering unique dishes and drinks crafted to delight every palate.</p>
+                        
+                </div>
             </div>
         </section>
 
@@ -67,87 +103,336 @@
             <h2 class="section-title">Main Menu</h2>
             <div class="menu-container">
                 <div class="product">
-                    <img src="#" alt="Coffee">
+                    <img src="assets/images/black-coffee.jpg" alt="Black Coffee">
                     <div class="product-attributes">
-                        <p class="product-name"></p>
+                        <p class="product-name">Black Coffee</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
                         <p class="product-price"></p>
                     </div>
-                    <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    <div class="cta-btn-container">
+                        <button class="order-now" id="order-now">Order Now</button>
+                        <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="product">
-                    <img src="#" alt="Coffee">
+                    <img src="assets/images/cappuccino.jpg" alt="Cappuccino">
                     <div class="product-attributes">
-                        <p class="product-name"></p>
+                        <p class="product-name">Cappuccino</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
                         <p class="product-price"></p>
                     </div>
-                    <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    <div class="cta-btn-container">
+                        <button class="order-now" id="order-now">Order Now</button>
+                        <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="product">
-                    <img src="#" alt="Coffee">
+                    <img src="assets/images/americano.jpg" alt="Americano">
                     <div class="product-attributes">
-                        <p class="product-name"></p>
+                        <p class="product-name">Americano</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
                         <p class="product-price"></p>
                     </div>
-                    <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    <div class="cta-btn-container">
+                        <button class="order-now" id="order-now">Order Now</button>
+                        <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="product">
-                    <img src="#" alt="Coffee">
+                    <img src="assets/images/macchiato.jpg" alt="Macchiato">
                     <div class="product-attributes">
-                        <p class="product-name"></p>
+                        <p class="product-name">Macchiato</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
                         <p class="product-price"></p>
                     </div>
-                    <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    <div class="cta-btn-container">
+                        <button class="order-now" id="order-now">Order Now</button>
+                        <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="product">
-                    <img src="#" alt="Coffee">
+                    <img src="assets/images/pancake.jpg" alt="Pancake">
                     <div class="product-attributes">
-                        <p class="product-name"></p>
+                        <p class="product-name">Pancake</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
                         <p class="product-price"></p>
                     </div>
-                    <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    <div class="cta-btn-container">
+                        <button class="order-now" id="order-now">Order Now</button>
+                        <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    </div>
                 </div>
                 <div class="product">
-                    <img src="#" alt="Coffee">
+                    <img src="assets/images/chocolate-frappe.jpg" alt="Chocolate Frappe">
                     <div class="product-attributes">
-                        <p class="product-name"></p>
+                        <p class="product-name">Chocolate Frappe</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
                         <p class="product-price"></p>
                     </div>
-                    <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    <div class="cta-btn-container">
+                        <button class="order-now" id="order-now">Order Now</button>
+                        <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/frappe-coffee.jpg" alt="Frappe Coffee">
+                    <div class="product-attributes">
+                        <p class="product-name">Frappe</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+
+                        </div>
+                        <p class="product-price"></p>
+                    </div>
+                    <div class="cta-btn-container">
+                        <button class="order-now" id="order-now">Order Now</button>
+                        <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/iced-coffee-concentrate-DP.jpg" alt="Iced Coffee">
+                    <div class="product-attributes">
+                        <p class="product-name">Iced Coffee</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="product-price"></p>
+                    </div>
+                    <div class="cta-btn-container">
+                        <button class="order-now" id="order-now">Order Now</button>
+                        <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/espresso.jpg" alt="Espresso">
+                    <div class="product-attributes">
+                        <p class="product-name">Espresso</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p class="product-price"></p>
+                    </div>
+                    <div class="cta-btn-container">
+                        <button class="order-now" id="order-now">Order Now</button>
+                        <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/chiffon..jpg" alt="Chiffon">
+                    <div class="product-attributes">
+                        <p class="product-name">Chiffon</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p class="product-price"></p>
+                    </div>
+                    <div class="cta-btn-container">
+                        <button class="order-now" id="order-now">Order Now</button>
+                        <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/flan.png" alt="Flan">
+                    <div class="product-attributes">
+                        <p class="product-name">Flan</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="product-price"></p>
+                    </div>
+                    <div class="cta-btn-container">
+                        <button class="order-now" id="order-now">Order Now</button>
+                        <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/strawberry-smoothie.jpg" alt="Strawberry Smoothie">
+                    <div class="product-attributes">
+                        <p class="product-name">Strawberry Smoothie</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="product-price"></p>
+                    </div>
+                    <div class="cta-btn-container">
+                        <button class="order-now" id="order-now">Order Now</button>
+                        <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/tea.jpg" alt="Tea">
+                    <div class="product-attributes">
+                        <p class="product-name">Tea</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p class="product-price"></p>
+                    </div>
+                    <div class="cta-btn-container">
+                        <button class="order-now" id="order-now">Order Now</button>
+                        <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/croissant.jpg" alt="Croissant">
+                    <div class="product-attributes">
+                        <p class="product-name">Croissant</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p class="product-price"></p>
+                    </div>
+                    <div class="cta-btn-container">
+                        <button class="order-now" id="order-now">Order Now</button>
+                        <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/fruit-tart.jpg" alt="Fruit Tart">
+                    <div class="product-attributes">
+                        <p class="product-name">Fruit Tart</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="product-price"></p>
+                    </div>
+                    <div class="cta-btn-container">
+                        <button class="order-now" id="order-now">Order Now</button>
+                        <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    </div>
                 </div>
             </div>
+            <p>- Visit our café for more! -</p>
         </section>
 
         <!-- PRODUCTS SECTIONS  -->
         <section class="products-section" id="products">
             <h2 class="section-title">The TOP-3 Product</h2>
             <div class="product-wrapper">
-                <div class="product-2">
-                    <img src="#" alt="">
+                <div class="product-rank-2 top-product">
+                    <div class="rank rank-2">2<sup>nd</sup></div>
+                    <p class="product-name">Iced Coffee</p>
+                    <img src="assets/images/iced-coffee-concentrate-DP.jpg" alt="Iced Coffee">
                     <div class="product-attributes">
-                        <p class="product-name"></p>
-                        <div class="product-rate"></div>
-                        <p class="product-price"></p>
+                        
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div><span>(3245 rates)</span>
+                        <p class="product-price">3.00$</p>
                     </div>
+                    <button class="order-now" id="order-now-btn">Order Now</button>
                 </div>
-            </div>
-            <div class="product-wrapper">
-                <div class="product-2">
-                    <img src="#" alt="">
+                <div class="product-rank-1 top-product">
+                    <div class="rank rank-1">1<sup>st</sup></div>
+                    <p class="product-name">Cappuccino</p>
+                    <img src="assets/images/cappuccino.jpg" alt="Cappuccino">
                     <div class="product-attributes">
-                        <p class="product-name"></p>
-                        <div class="product-rate"></div>
-                        <p class="product-price"></p>
+                        
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span>(7586 rates)</span>
+                        <p class="product-price">4.00$</p>
                     </div>
+                    <button class="order-now" id="order-now-btn">Order Now</button>
                 </div>
-            </div>
-            <div class="product-wrapper">
-                <div class="product-2">
-                    <img src="#" alt="">
+                <div class="product-rank-3 top-product">
+                    <div class="rank rank-3">3<sup>rd</sup></div>
+                    <p class="product-name">Milk Tea</p>
+                    <img src="assets/images/milk-tea.jpg" alt="Milk Tea">
                     <div class="product-attributes">
-                        <p class="product-name"></p>
-                        <div class="product-rate"></div>
-                        <p class="product-price"></p>
+                        
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div><span>(3096 rates)</span>
+                        <p class="product-price">6.00$</p>
                     </div>
+                    <button class="order-now" id="order-now-btn">Order Now</button>
                 </div>
             </div>
             
@@ -156,52 +441,111 @@
         <!-- REVIEW SECTION  -->
         <section class="review-section" id="review">
             <h2 class="section-title">Reviews</h2>
-            <div class="swiper">
-                <div class="swiper-wrapper">
+            <!-- Slider main container -->
+            <div class="swiper review">
 
-                  <div class="swiper-slide review-container">
-                    <div class="customer-image-container">
-                        <img src="#" alt="">
-                    </div>
-                    <div class="review-para"></div>
-                    <p class="customer-name"></p>
-                  </div>
-                  <div class="swiper-slide review-container">
-                    <div class="customer-image-container">
-                        <img src="#" alt="">
-                    </div>
-                    <div class="review-para"></div>
-                    <p class="customer-name"></p>
-                  </div>
-                  <div class="swiper-slide review-container">
-                    <div class="customer-image-container">
-                        <img src="#" alt="">
-                    </div>
-                    <div class="review-para"></div>
-                    <p class="customer-name"></p>
-                  </div>
-                  <div class="swiper-slide review-container">
-                    <div class="customer-image-container">
-                        <img src="#" alt="">
-                    </div>
-                    <div class="review-para"></div>
-                    <p class="customer-name"></p>
-                  </div>
-                  <div class="swiper-slide review-container">
-                    <div class="customer-image-container">
-                        <img src="#" alt="">
-                    </div>
-                    <div class="review-para"></div>
-                    <p class="customer-name"></p>
-                  </div>
-                  <div class="swiper-slide review-container">
-                    <div class="customer-image-container">
-                        <img src="#" alt="">
-                    </div>
-                    <div class="review-para"></div>
-                    <p class="customer-name"></p>
-                  </div>
+                <div class="swiper-wrapper review-wrapper">
 
+                  <div class="swiper-slide">
+                    <div class="review-container">
+                        <div class="img-container">
+                            <img src="assets/images/bale.jpg" alt="Gareth Bale" class="customer-img">
+                        </div>
+                        <p class="review-paragraph">"The cappuccino here is unmatched—smooth, rich, and perfectly balanced. A must-try!"</p>
+                        <p>Favourite</p>
+                        <div class="favourite">
+                            <img src="assets/images/americano.jpg" alt="Americano">
+                            <img src="assets/images/cappuccino.jpg" alt="Cappuccino">
+                            <img src="assets/images/espresso.jpg" alt="Espresso">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="review-container">
+                        <div class="img-container">
+                            <img src="assets/images/messi.jpg" alt="Lionel Messi" class="customer-img">
+                        </div>
+                        <p class="review-paragraph">"Every bite of chiffon cake feels like a cloud of sweetness—simply divine."
+                        </p>
+                        <p>Favourite</p>
+                        <div class="favourite">
+                            <img src="assets/images/chiffon.jpg" alt="Chiffon">
+                            <img src="assets/images/black-coffee.jpg" alt="Black Coffee">
+                            <img src="assets/images/strawberry-smoothie.jpg" alt="Strawberry smoothie">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="review-container">
+                        <div class="img-container">
+                            <img src="assets/images/ronaldo.jpg" alt="Cristiano Ronaldo" class="customer-img">
+                        </div>
+                        <p class="review-paragraph">"Black coffee speaks volumes with its simplicity and strength. A timeless classic."</p>
+                        <p>Favourite</p>
+                        <div class="favourite">
+                            <img src="assets/images/black-coffee.jpg" alt="Americano">
+                            <img src="assets/images/fruit-tart.jpg" alt="Fruit Tart">
+                            <img src="assets/images/cappuccino.jpg" alt="Cappuccino">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="review-container">
+                        <div class="img-container">
+                            <img src="assets/images/kroos.jpg" alt="Toni Kroos" class="customer-img">
+                        </div>
+                        <p class="review-paragraph">"Perfectly blended and deliciously chocolatey, the Chocolate Frappe is my favorite pick-me-up!"</p>
+                        <p>Favourite</p>
+                        <div class="favourite">
+                            <img src="assets/images/tea.jpg" alt="Tea">
+                            <img src="assets/images/iced-coffee-concentrate-DP.jpg" alt="Iced Coffee">
+                            <img src="assets/images/chocolate-frappe.jpg" alt="Chocolate frappe">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="review-container">
+                        <div class="img-container">
+                            <img src="assets/images/mbappe.jpg" alt="Killian Mbappe" class="customer-img">
+                        </div>
+                        <p class="review-paragraph">"Flan’s silky texture and rich flavor make it an irresistible classic."</p>
+                        <p>Favourite</p>
+                        <div class="favourite">
+                            <img src="assets/images/flan.png" alt="Flan">
+                            <img src="assets/images/macchiato.jpg" alt="Macchiato">
+                            <img src="assets/images/croissant.jpg" alt="Croissant">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="review-container">
+                        <div class="img-container">
+                            <img src="assets/images/casemiro.jpeg" alt="Casemiro" class="customer-img">
+                        </div>
+                        <p class="review-paragraph">"Refreshing, satisfying, and versatile, milk tea is a drink that never goes out of style."</p>
+                        <p>Favourite</p>
+                        <div class="favourite">
+                            <img src="assets/images/cappuccino.jpg" alt="Cappuccino">
+                            <img src="assets/images/milk-tea.jpg" alt="Milk tea">
+                            <img src="assets/images/pancake.jpg" alt="Pancake">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="review-container">
+                        <div class="img-container">
+                            <img src="assets/images/haaland.jpg" alt="Haaland" class="customer-img">
+                        </div>
+                        <p class="review-paragraph">"Fluffy, golden, and irresistibly soft—pancakes are the breakfast classic everyone loves."</p>
+                        <p>Favourite</p>
+                        <div class="favourite">
+                            <img src="assets/images/strawberry-smoothie.jpg" alt="Americano">
+                            <img src="assets/images/pancake.jpg" alt="Strawberry smoothie">
+                            <img src="assets/images/espresso.jpg" alt="Espresso">
+                        </div>
+                    </div>
+                  </div>
+                  
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
@@ -209,27 +553,96 @@
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-
-              </div>
+              
+                <!-- If we need scrollbar -->
+            </div>            
             
         </section>
 
         <!-- CONTACT SECTION  -->
         <section class="contact-section" id="contact">
             <h2 class="section-title">Contact Us</h2>
-            <div class="location-container" id="map">
-
+            <div class="contact-wrapper">
+                <div class="location-container" id="map"></div>
+                <div class="gitouch-container">
+                    <form action="/submit-form" method="post" class="contact-form">
+                        <h3 class="contact-subtitle">GET IN TOUCH</h3>
+                        <h4 class="contact-subtitle">For promotional programs and fastest shipping!</h4>
+                        <input type="text" name="fname" placeholder="Full Name">
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="tel" name="phone" placeholder="Phone Number">
+                        <button type="submit" class="submit-button">Send</button>
+                    </form>
+                    <p>Follow our social:</p>
+                    <div class="social-icon-container">
+                        <a href="" class="social-link"><i class="ri-facebook-circle-fill social-icon"></i></a>
+                        <a href="" class="social-link"><i class="ri-instagram-fill social-icon"></i></a>
+                        <a href="" class="social-link"><i class="ri-twitter-x-fill social-icon"></i></i></a>
+                    </div>
+                </div>
             </div>
+
         </section>
 
         <!-- BLOGS SECTION  -->
         <section class="blogs-section" id="blogs">
             <h2 class="section-title">Blogs</h2>
+            <h3 class="section-subtitle">This Week</h3>
+            <div class="blog-wrapper">
+                <div class="blog-container">
+                    <img src="assets/images/opening.jpg" alt="Opening Cafe">
+                    <p class="blog-description">"Our cafe is now open! Join us for freshly brewed coffee, delicious treats, and a cozy atmosphere. We can't wait to welcome you!"</p>
+                    <a href="#">Learn More &rarr;</a>
+                </div>
+                <div class="blog-container">
+                    <img src="assets/images/cappuccino.jpg" alt="Cappuccino">
+                    <p class="blog-description">"Welcome to our coffee world, where every cup tells a story. From bold espressos to creamy lattes, we celebrate the art of coffee in every sip."</p>
+                    <a href="#">Learn More &rarr;</a>
+                </div>
+                <div class="blog-container">
+                    <img src="assets/images/on-sale.avif" alt="Big Sale">
+                    <p class="blog-description">"Our cafe is on sale! Enjoy your favorite coffee and treats at special prices. Don't miss this chance to savor more for less!"</p>
+                    <a href="#">Learn More &rarr;</a>
+                </div>
+                <div class="blog-container">
+                    <img src="assets/images/messi-in-cafe.jpg" alt="Lionel Messi">
+                    <p class="blog-description">"Guess who stopped by? Messi himself visited our cafe! It was an unforgettable moment, and we were thrilled to serve the legend his favorite coffee. Dreams do come true!"</p>
+                    <a href="#">Learn More &rarr;</a>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
-
+        <div class="wrapper">
+            <div class="footer-container">
+                <h5 class="footer-title">POLICIES</h5>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">User Policy</a></li>
+                    <li><a href="#">Term of Service</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <h5 class="footer-title">STORE SYSTEM</h5>
+                <ul>
+                    <li><a href="#">Nearby Stores</a></li>
+                    <li><a href="#">Opening Hours</a></li>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <h5 class="footer-title">CONTACT</h5>
+                <ul>
+                    <li><a href="tel:+8431234321">Phone: 0977777777</a></li>
+                    <li><a href="mailto:infomation@cafe.com">Email: infomation@cafe.com</a></li>
+                    <li><a href="#">Customer Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Cafe House. All rights reserved.</p>
+        </div>
     </footer>
 
     <!-- LEAFLET JS  -->
@@ -240,18 +653,24 @@
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
       
         const swiper = new Swiper('.swiper', {
-        loop: true,
+            // Optional parameters
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: 12,
+            centeredSlides: true,
 
-        pagination: {
-            el: '.swiper-pagination',
-        },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
 
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        });
+            // Navigation 
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            });
       </script>
 
      <!-- CUSTOM SCRIPTS  -->

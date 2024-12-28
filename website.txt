@@ -6,6 +6,7 @@ hero div with get it now cta btn, background img and some call
 
 -- ABOUT --
 What make our coffee special ? 
+Quality, unique menu, customer experience, shop atmosphere, brand story
 Learn more cta btn
 
 -- MENU --

@@ -1,15 +1,7 @@
+
 // MAP SCRIPT 
-const lat = 21.03829956367568
-const lng = 105.7826629531152
+var map = L.map('map').setView([21.02014554822514, 105.784259312448], 13);
 
-const map = L.map('map').setView([51.505, -0.09], 13);
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution:  '© Vietbando'
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-
-// Thêm marker cho quán ăn và tạo popup
-L.marker([restaurantLat, restaurantLng]).addTo(map)
-  .bindPopup('Your Restaurant Here!<br>Enjoy delicious food.')
-  .openPopup();
