@@ -41,6 +41,27 @@
         </div>
 
 
+        <div class="side-navbar" id="side-navbar">
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>  
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#review" class="nav-link">Review</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#blogs" class="nav-link">Blogs</a></li>
+            </ul>
+        </div>
+        
+        <div class="search-box" id="search-box">
+            <input type="text" placeholder="Search">
+            <button class="close-btn" id="close-btn"><i class="ri-close-large-fill"></i></button>
+        </div>
+
+
+
+
+        <div class="overlay" id="overlay"></div>
     </header>
 
     <main class="main">
@@ -60,7 +81,7 @@
 
         <!-- ABOUT SECTION  -->
         <section class="about-section" id="about">
-            <h2 class="section-title">About Us</h2>
+            <h2 class="section-title"><span>About</span> Us</h2>
             <h3 class="intro-title">What make our coffee special?</h3>
             <div class="diff-wrapper">
                 <div class="diff-container">
@@ -100,7 +121,7 @@
 
         <!-- MENU SECTION  -->
         <section class="menu-section" id="menu">
-            <h2 class="section-title">Main Menu</h2>
+            <h2 class="section-title">Main <span>Menu</span></h2>
             <div class="menu-container">
                 <div class="product">
                     <img src="assets/images/black-coffee.jpg" alt="Black Coffee">
@@ -267,7 +288,7 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="assets/images/chiffon..jpg" alt="Chiffon">
+                    <img src="assets/images/chiffon.jpg" alt="Chiffon">
                     <div class="product-attributes">
                         <p class="product-name">Chiffon</p>
                         <div class="rating">
@@ -380,14 +401,13 @@
 
         <!-- PRODUCTS SECTIONS  -->
         <section class="products-section" id="products">
-            <h2 class="section-title">The TOP-3 Product</h2>
+            <h2 class="section-title">The <span>TOP-3 Product</span></h2>
             <div class="product-wrapper">
                 <div class="product-rank-2 top-product">
                     <div class="rank rank-2">2<sup>nd</sup></div>
                     <p class="product-name">Iced Coffee</p>
                     <img src="assets/images/iced-coffee-concentrate-DP.jpg" alt="Iced Coffee">
                     <div class="product-attributes">
-                        
                         <div class="rating">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -440,7 +460,7 @@
 
         <!-- REVIEW SECTION  -->
         <section class="review-section" id="review">
-            <h2 class="section-title">Reviews</h2>
+            <h2 class="section-title"><span>Reviews</span></h2>
             <!-- Slider main container -->
             <div class="swiper review">
 
@@ -561,7 +581,7 @@
 
         <!-- CONTACT SECTION  -->
         <section class="contact-section" id="contact">
-            <h2 class="section-title">Contact Us</h2>
+            <h2 class="section-title"><span>Contact</span> Us</h2>
             <div class="contact-wrapper">
                 <div class="location-container" id="map"></div>
                 <div class="gitouch-container">
@@ -586,7 +606,7 @@
 
         <!-- BLOGS SECTION  -->
         <section class="blogs-section" id="blogs">
-            <h2 class="section-title">Blogs</h2>
+            <h2 class="section-title"><span>Blogs</span></h2>
             <h3 class="section-subtitle">This Week</h3>
             <div class="blog-wrapper">
                 <div class="blog-container">
@@ -658,6 +678,10 @@
             slidesPerView: 3,
             spaceBetween: 12,
             centeredSlides: true,
+            
+            autoplay: {
+                delay: 3000,
+            },
 
             pagination: {
                 el: '.swiper-pagination',
@@ -670,6 +694,18 @@
                 prevEl: '.swiper-button-prev',
             },
 
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3,
+                },
+                600: {
+                    slidesPerView: 2,
+                    
+                },
+                0: {
+                    slidesPerView: 1,
+                },
+            },  
             });
       </script>
 
