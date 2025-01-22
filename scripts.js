@@ -1,51 +1,53 @@
-
-// MAP SCRIPT 
-var map = L.map('map').setView([21.02014554822514, 105.784259312448], 13);
-
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+let addBtn = document.getElementById("addBtn");
+let todoList = document.getElementById("todoList");
+let taskInput = document.getElementById("taskInput");
 
 
 
-//Side navbar 
-const menuBtn = document.getElementById('menu-btn');
-const sideNavbar = document.getElementById('side-navbar');
-const overlay = document.getElementById('overlay');
 
-menuBtn.addEventListener('click', () => {
-  sideNavbar.style.transform = 'translateX(0)';
-  overlay.classList.add('active');
+
+// Add erase button 
+let listTask = document.querySelectorAll(".task");
+listTask.forEach((task) => {
+    addErase(task);
+    task.addEventListener('click', () => checked(task));
 });
 
-const closeNavbar = () => {
-  sideNavbar.style.transform = 'translateX(100%)';
-  overlay.classList.remove('active');
+addBtn.addEventListener('click', addTask)
 
+//FUNCTIONS 
+
+//Add task function
+function addTask(){
+    inputValue = taskInput.value;
+    if (inputValue.trim() === ""){
+        alert("Do nothing?");
+    }
+    else {
+        let newTask = document.createElement("LI");
+        newTask.innerText = inputValue;
+        todoList.appendChild(newTask);
+        addErase(newTask);}
+    taskInput.value = '';
+    }
+
+
+//Add erase function
+function addErase(task){
+    let erase = document.createElement("SPAN");
+    erase.className = "erase-btn";
+    let icon = document.createElement("i");
+    icon.classList.add("fa-solid", "fa-eraser");
+    erase.appendChild(icon);
+    task.appendChild(erase);    
+
+    erase.addEventListener('click', () => {
+        task.remove();
+    })
 }
 
 
-
-
-//Search box
-const searchBox = document.getElementById('search-box');
-const closeBtn = document.getElementById('close-btn');
-const searchBtn = document.getElementById('search-btn');
-
-searchBtn.addEventListener('click', () => {
-  searchBox.style.transform = 'translateX(0)';
-  overlay.classList.add('active');
-})
-
-const closeSearchBox = () => {
-  searchBox.style.transform = 'translateX(100%)';
+// Checked function
+function checked(task){
+    task.classList.toggle('checked');
 }
-closeBtn.addEventListener('click', closeSearchBox);
-
-
-//Close All
-overlay.addEventListener('click', () => {
-  closeNavbar();
-  closeSearchBox();
-});
-

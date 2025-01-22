@@ -1,0 +1,5 @@
+Ý tưởng: Một phần mềm ghi chép nhiệm vụ hàng ngày
+Có phương thức hoạt động đơn giản: 
+    Thêm, bớt nhiệm vụ
+    Tích hoàn thành hoặc chưa hoàn thành
+Thiết kế theo kiểu trang giấy
